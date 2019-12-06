@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="test07Style.css"/>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+<div class="banner">
+    <div class="pic" id="first"><img src="pic2/pic01.png" alt=""/></div>
+    <div class="pic"><img src="pic2/pic02.jpg" alt=""/></div>
+    <div class="pic"><img src="pic2/pic03.png" alt=""/></div>
+</div>
+<span class="right">&gt;</span>
+<span class="left">&lt;</span>
+<div class="point"></div>
+<script>
+    /*定义全局变量 表示下标*/
+    var count = 0;
+    $(function () {
+        $(".eachpoint").eq(0).css("opacity","1").siblings(".eachpoint").css("opacity","0.5");
+    })
+    $(".right").click(function () {
+
+        count++;
+        if(count==$(".pic").length){
+            count = 0;
+        }
+        $(".pic").eq(count).stop().fadeIn().siblings().fadeOut();
+        $(".eachpoint").eq(count).css("opacity","1").siblings(".eachpoint").css("opacity","0.5");
+    })
+    $(".left").click(function () {
+        count--;
+        if(count==-1){
+            count = 2
+        }
+        $(".pic").eq(count).stop().fadeIn().siblings().fadeOut();
+        $(".eachpoint").eq(count).css("opacity","1").siblings(".eachpoint").css("opacity","0.5");
+    })
+    for(var i=0;i<$(".pic").length;i++){
+        $("<span class='eachpoint'></span>").appendTo(".point");
+
+    }
+</script>
+
+</body>
+</html>

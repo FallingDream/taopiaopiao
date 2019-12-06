@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="page1Style.css"/>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+<div class="top">
+    <video src="pic2/a1.mp4" class="video" autoplay controls></video>
+</div>
+<div class="danmu">
+    <form action="">
+        <div class="danmu3"><span class="danmu2">弹幕内容</span></div>
+        <input type="text" placeholder="请输入弹幕内容" class="danmu1"/>
+        <input type="button" value="发送弹幕" class="fasong" />
+    </form>
+</div>
+<div class="center">
+    <div class="left">
+        <span class="text">
+            <span class="tx1">西虹市首富</span> <br/>
+            <div class="tx2">
+                导演:XXXXXXX <br/>
+                主演:XXXXXXXXXXXXXXXXX <br/>
+                影评:XXXXXXXXXXX <br/>
+            </div>
+        </span>
+    </div>
+    <div class="right">
+        <img src="image/apic1.jpg" alt="" class="pic1"/>
+    </div>
+</div>
+<div class="bottom">
+    <div class="left1">
+        <div class="text2">
+            <span class="grade">8.2</span>
+        </div>
+            <div class="star"><img src="image/d星星.png" alt="" class="star01"/></div>
+            <div class="star"><img src="image/d星星.png" alt="" class="star01"/></div>
+            <div class="star"><img src="image/d星星.png" alt="" class="star01"/></div>
+            <div class="star"><img src="image/d星星.png" alt="" class="star01"/></div>
+
+
+    </div>
+    <div class="center1">
+        <span class="text3">好评率:92%</span>
+    </div>
+    <div class="right1">
+        <span class="text4">想看人数：<br/>
+            <span class="text5">
+                9999999999
+            </span>
+        </span></div>
+</div>
+<div class="lastbottom1">
+    <div class="lastleft">
+        <input type="button" class="want" value="想看"/>
+    </div>
+    <div class="lastright">
+        <input type="button" class="notwant" value="看过"/>
+    </div>
+</div>
+<div class="lastbottom2">
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+</div>
+<div class="lastbottom3">
+    <div class="text1"><span class="tx3">参演人员:</span></div>
+    <div class="pic01"><img src="image/s1.png" alt="" class="pic02"/></div>
+    <div class="pic01"><img src="image/s2.png" alt="" class="pic02"/></div>
+    <div class="pic01"><img src="image/s3.png" alt="" class="pic02"/></div>
+    <div class="pic01"><img src="image/s4.png" alt="" class="pic02"/></div>
+</div>
+<footer class="foot">
+    <a href="test06.html"><span class="buy">选座购票</span></a>
+</footer>
+<script>
+    var textcolor=["red","yellow","green","blue","pink","gold","orange"];
+    $(".fasong").click(function () {
+        var wenzi=$(".danmu1").val();
+        var videoWidth = $(".top").width();
+        var danHetight = Math.random()*$(".top").height()*0.6;
+        var tcolor = Math.floor(Math.random()*textcolor.length);
+
+        $("<span class='write'></span>").text(wenzi).css("left",videoWidth).css("top",danHetight)
+                .css("color",textcolor[tcolor]).css("width",wenzi.length*20).animate({left:-wenzi.length*20},3000,function () {
+                    $(this).remove();
+                })
+                .appendTo(".top");
+        $(".danmu1").val("");
+    })
+    $(".danmu1").keyup(function (e) {
+        if(e.keyCode==32){
+            $(".fasong").click();
+        }
+    })
+
+</script>
+</body>
+</html>

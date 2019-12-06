@@ -1,0 +1,19 @@
+.buy{
+    width: 200px;
+    height: 200px;
+    /*background-color: aqua;*/
+    margin: 30px auto;
+}
+.buyImg{
+    width: 100%;
+    height: 100%;
+}
+.text{
+    font-size: 40px;
+    color: red;
+    margin-left: 20px;
+    float: left;
+}
+.back{
+    margin-left: 80px;
+}

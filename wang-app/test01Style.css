@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 30px;
+    /*background-color: red;*/
+}
+/*后代选择器*/
+header .pic{
+    width: 30px;
+    height: 30px;
+    /*background-color: yellow;*/
+    float: left;
+}
+nav{
+    width: 60%;
+    height: 30px;
+    /*background-color: blue;*/
+    float: right;
+}
+/*并集选择器，用，(英文)隔开*/
+.mess1,.mess2{
+    width: 50%;
+    height: 30px;
+   /* background-color: orange;*/
+    float: left;
+    /*去除列表样式*/
+    list-style: none;
+    /*文本居中*/
+    text-align: center;
+    /*行居中*/
+    line-height: 30px;
+}
+.mess1{
+    color: red;
+    /*边框  边框宽度 边框样式 边框颜色*/
+    border-bottom: 5px solid red;
+
+}
+.mess2{
+    color: grey;
+}
+.banner{
+    margin-top: 8px;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    /*background-color: yellow;*/
+}
+.bannerImg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.pica{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+#first{
+    display: block;
+}
+.bannerright{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fbfff6;
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+    color: grey;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    opacity: 0.1;
+}
+.bannerleft{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fbfff6;
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+    color: grey;
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    opacity: 0.1;
+}
+.bannerleft:hover{
+    opacity: 0.6;
+}
+.bannerright:hover{
+    opacity: 0.6;
+}
+.point{
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    top: 250px;
+    left: 200px;
+}
+.eachpoint{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.7;
+}
+.center{
+    margin-top: 5px;
+    width: 100%;
+    height: 190px;
+
+    /*background-color: aqua;*/
+}
+.lastcenter{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 60px;
+}
+.movie{
+    width: 100%;
+    height: 180px;
+   /*background-color: yellow;*/
+    border-bottom: 1px solid grey;
+}
+.top{
+    width: 100%;
+    height: 140px;
+   /*background-color: greenyellow;*/
+
+}
+.bottom{
+    width: 100%;
+    height: 40px;
+   /*background-color: deepskyblue;*/
+
+}
+.left{
+    width: 25%;
+    height: 100%;
+   /*background-color: red;*/
+    float: left;
+    /*相对定位*/
+    position: relative;
+}
+.center2{
+    margin-left: 2%;
+    width: 59%;
+    height: 100%;
+    /*background-color: antiquewhite;*/
+    float: left;
+    /*改变字体大小*/
+    font-size: 15px;
+    color: grey;
+}
+.right{
+    /*width: 13%;
+    height: 50%;*/
+    /*background-color: aqua;*/
+    float: right;
+    margin-top: 50px;
+    width: 13%;
+    height: 35px;
+    background-color: #e25ddc;
+    border-radius: 15px;
+    line-height: 35px;
+    text-align: center;
+}
+.text{
+    width: 73%;
+    height: 32px;
+   /*background-color: darkorange;*/
+    float: right;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    border-top: 1px solid grey;
+    line-height: 30px;
+}
+.pic1{
+    width: 100%;
+    height: 100%;
+
+}
+.pic2{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+.pinglun{
+    color: yellow;
+}
+.grade{
+    color: yellow;
+}
+.text2{
+    color: grey;
+}
+.tx{
+    letter-spacing: 2px;
+}
+.pay{
+    color: white;
+}
+.foot{
+    width: 100%;
+    height: 60px;
+    background-color: #fbfff6;
+    /*margin-top: 5px;*/
+    border-top: 2px solid grey;
+    /*定位 固定定位*/
+    position: fixed;
+    bottom: 0;
+}
+.left1{
+    width: 30%;
+    height: 100%;
+   /*background-color: aquamarine;*/
+    margin-left: 2%;
+    float: left;
+    text-align: center;
+}
+.mid1{
+    width: 30%;
+    height: 100%;
+   /*background-color: aquamarine;*/
+    margin-left: 3%;
+    float: left;
+    text-align: center;
+}
+.right1{
+    width: 30%;
+    height: 100%;
+    /*background-color: aquamarine;*/
+    margin-right: 2%;
+    float: right;
+    text-align: center;
+}
+.tip{
+    width: 8%;
+    height: 8%;
+    /*绝对定位*/
+    position: absolute;
+    /* background-color: aqua;*/
+}
+.tippic{
+    width: 100%;
+    height: 100%;
+
+}
+a{
+    text-decoration: none;
+}

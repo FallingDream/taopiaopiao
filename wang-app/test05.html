@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="test05Style.css"/>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+<div class="head">
+    <div class="text1">
+        <span class="text2">西虹市首富</span> <br/>
+        <span class="text3">今天08-05 10:20 国语2D</span>
+    </div>
+    <div class="pic"><img src="image/apic1.jpg" alt="" class="pic1"/></div>
+</div>
+<div class="test">
+    <span class="test1"></span>
+    <span class="test2">可选</span>
+    <span class="test3"><img src="image/logo.png" alt="" class="logo"/></span>
+    <span class="test4">已售</span>
+</div>
+<div class="center">
+    <span class="top">5号厅</span>
+    <div class="seat">
+        <span class="seat1">A1</span>
+        <span class="seat1">A2</span>
+        <span class="seat1">A3</span>
+        <span class="seat1">A4</span>
+        <span class="seat1">A5</span>
+        <span class="seat1">A6</span>
+        <span class="seat1">A7</span>
+        <span class="seat1">A8</span>
+        <span class="seat1">A9</span>
+
+    </div>
+    <div class="seat">
+        <span class="seat1">B1</span>
+        <span class="seat1">B2</span>
+        <span class="seat1">B3</span>
+        <span class="seat1">B4</span>
+        <span class="seat1">B5</span>
+        <span class="seat1">B6</span>
+        <span class="seat1">B7</span>
+        <span class="seat1">B8</span>
+    </div>
+    <div class="seat">
+        <span class="seat1">C1</span>
+        <span class="seat1">C2</span>
+        <span class="seat1">C3</span>
+        <span class="seat1">C4</span>
+        <span class="seat1">C5</span>
+        <span class="seat1">C6</span>
+        <span class="seat1">C7</span>
+        <span class="seat1">C8</span>
+    </div>
+    <div class="seat">
+        <span class="seat1">D1</span>
+        <span class="seat1">D2</span>
+        <span class="seat1">D3</span>
+        <span class="seat1">D4</span>
+        <span class="seat1">D5</span>
+        <span class="seat1">D6</span>
+        <span class="seat1">D7</span>
+        <span class="seat1">D8</span>
+        <span class="seat1">D9</span>
+
+    </div>
+    <div class="seat">
+        <span class="seat1">E1</span>
+        <span class="seat1">E2</span>
+        <span class="seat1">E3</span>
+        <span class="seat1">E4</span>
+        <span class="seat1">E5</span>
+        <span class="seat1">E6</span>
+        <span class="seat1">E7</span>
+        <span class="seat1">E8</span>
+    </div>
+</div>
+<div class="bottom">
+    <span class="welcome">欢迎小可爱</span>
+</div>
+<footer class="foot">
+    <!--<a href="buy.html" class="chao">-->
+        <input type="submit" value="请先选座" class="button"/>
+   <!-- </a>-->
+</footer>
+<script>
+    $(function(){
+        var a = 0;
+        var b = 0;
+        $(".seat1").click(function(){
+            /*css方法两个参数 第一个要改变的属性名 第二个是改变的属性值*/
+            var image=$(this).css("background-image");
+            if(image=="none"){
+                $(this).css("background-image","url('image/logo.png')");
+                /*$(this).text("");*/
+                a = a + 1;
+                b = a * 29;
+                $(".button").css("opacity","0.5");
+                $(".button").val("一共选了"+a+"张票,一共需要"+b+"元")
+                $(this).css("color","transparent");
+            }
+            else {
+                $(this).css("background-image","none");
+                a = a - 1;
+                b = a * 29;
+                $(".button").val("一共选了"+a+"张票,一共需要"+b+"元");
+                $(this).css("color","black");
+            }
+            if(a==0){
+                $(".button").val("请先选座");
+                $(".button").css("opacity","1");
+            }
+        });
+        $(".button").click(function(){
+            if(a==0){
+                var c = $(".button").val();
+                alert(c);
+            }
+            else{
+                var d = $(".button").val();
+                alert("请支付"+b+"元");
+                location.href="buy.html";
+            }
+        });
+    })
+</script>
+</body>
+</html>

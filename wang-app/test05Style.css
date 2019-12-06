@@ -1,0 +1,142 @@
+.head{
+    width: 100%;
+    height: 200px;
+    /*background-color: #feb0ff;*/
+    border-bottom: 1px solid black;
+}
+.test{
+    width: 100%;
+    height: 40px;
+  /*  background-color: #ff8f7f;*/
+    margin-top: 10px;
+    position: relative;
+}
+.center{
+    width: 100%;
+    height: 400px;
+    background-color: #E9EEF0;
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+}
+.bottom{
+    width: 100%;
+    height: 50px;
+    /*background-color: aquamarine;*/
+    margin-top: 10px;
+}
+.foot{
+    width: 100%;
+    height: 60px;
+    /*background-color: #ff8f7f;*/
+    margin-top: 10px;
+
+}
+.text1{
+    width: 60%;
+    height: 100%;
+    /*background-color: #ff8f7f;*/
+    float: left;
+}
+.text2{
+    font-size: 30px;
+    color: black;
+    line-height: 50px;
+    margin-left: 20px;
+}
+.text3{
+    color: grey;
+    margin-left: 20px;
+    letter-spacing: 2px;
+}
+.pic{
+    width: 30%;
+    height: 97%;
+    /*background-color: aquamarine;*/
+    float: right;
+}
+.pic1{
+    width: 100%;
+    height: 100%;
+}
+.test1{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 160px;
+    top: 15px;
+    border: 1px solid black;
+}
+.test2{
+    position: absolute;
+    left: 200px;
+    top: 25px;
+}
+.test3{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 240px;
+    top: 15px;
+    border: 1px solid black;
+}
+.logo{
+    width: 100%;
+    height: 100%;
+}
+.test4{
+    position: absolute;
+    left: 280px;
+    top: 25px;
+}
+.top{
+    display: block;
+    width: 30%;
+    height: 40px;
+    margin: 0px auto;
+    background-color: grey;
+    text-align: center;
+    font-size: 25px;
+}
+.seat{
+    width: 100%;
+    height: 13%;
+    margin-top: 15px;
+    /*background-color: beige;*/
+}
+.seat1{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    border: 2px solid black;
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 32px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.welcome{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+.button{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #e25ddc;
+    opacity: 1;
+    font-size: 25px;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
